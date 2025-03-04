@@ -1,0 +1,171 @@
+body{
+    font-family: Arial, sans-serif;
+    display:flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    background-color: #f8f9fa;
+    margin: 0;
+}
+.container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    
+}
+h1{
+    font-size: 24px;
+    font-weight:bold;
+    margin-bottom: 5px;
+}
+p{
+    font-size: 14px;
+    color:gray;
+    margin-bottom: 15px;
+}
+.toggle-buttons{
+    display:flex;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 300px;
+    margin:auto;
+    margin-bottom: 25px;
+    gap:10px;
+}
+.toggle-buttons button {
+    flex: 1; /* Makes buttons equal width */
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+/* Active button (Sign in selected) */
+.toggle-buttons .active {
+    background-color: white; /* White background */
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2); /* Adds a slight shadow */
+}
+
+/* Inactive button (Sign up) */
+.toggle-buttons button:not(.active) {
+    background-color: #f1f1f1; /* Light gray */
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    width:300px;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.input-container .icon {
+    margin-right: 10px;
+}
+
+.input-container input {
+    border: none;
+    outline: none;
+    flex-grow: 1;
+}
+.input-group label {
+    text-align: left; /* Align label to the left */
+    width: 100%; /* Ensure label takes full width */
+    margin-bottom: 5px; /* Add a small gap below label */
+}
+.shared-width{
+    width:300px;
+}
+.submit-btn {
+    background-color: #0d253f; /* Dark navy color */
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%; /* Ensures it matches the shared-width */
+    text-align: center;
+}
+
+/* OR Separator */
+.or-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 0;
+    color: gray;
+    font-size: 14px;
+}
+
+.or-container::before,
+.or-container::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #ddd;
+    margin: 0 10px;
+}
+
+/* Google Button */
+.google-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    background-color: white;
+}
+
+.google-btn i {
+    margin-right: 8px;
+    color: #db4437; /* Google red color */
+}
+
+/* Sign-up link */
+.signup-text {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.signup-text a {
+    color: limegreen;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.signup-text a:hover {
+    text-decoration: underline;
+}
+/* Styling for First Name and Last Name fields */
+.name-container {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    gap: 25px;
+}
+
+.name-container .input-group {
+    width: 50%;
+}
+.name-container .input-container{
+    width: 100%;
+}

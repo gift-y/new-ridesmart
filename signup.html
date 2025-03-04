@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Create an Account</h1>
+        <p>Please enter your details</p>
+    
+        <div class="toggle-buttons shared-width">
+            <button>Sign in</button>
+            <button class="active">Sign up</button>
+        </div>
+
+        <div class="name-container">
+        <div class="name-container shared-width">
+            <div class="input-group">
+                <label for="first-name">First Name</label>
+                <div class="input-container">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" id="first-name" placeholder="First Name">
+                </div>
+            </div>
+            <div class="input-group">
+                <label for="last-name">Last Name</label>
+                <div class="input-container">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" id="last-name" placeholder="Last Name">
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <div class="input-group shared-width">
+            <label for="username">Username</label>
+            <div class="input-container">
+                <i class="fa-solid fa-envelope"></i>
+                <input type="text" id="username" placeholder="yourname@domain.com">
+            </div>
+        </div>
+
+        <div class="input-group shared-width">
+            <label for="password">Password</label>
+            <div class="input-container">
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" id="password">
+                <i class="fa-solid fa-eye-slash toggle-password"></i>
+            </div>
+        </div>
+
+        <button class="submit-btn shared-width">Submit</button>
+        <div class="or-container shared-width">or</div>
+        <button class="google-btn shared-width">
+            <i class="fa-brands fa-google"></i>Google
+        </button>
+
+        <p class="signup-text">Already have an account? <a href="#">Sign in</a></p>
+
+        <script>
+            document.querySelector('.toggle-password').addEventListener('click', function () {
+                const passwordInput = document.getElementById('password');
+                if (passwordInput.type === 'password') {
+                    passwordInput.type = 'text';
+                    this.classList.replace('fa-eye-slash', 'fa-eye');
+                } else {
+                    passwordInput.type = 'password';
+                    this.classList.replace('fa-eye', 'fa-eye-slash');
+                }
+            });
+        </script>
+    </div>
+</body>
+</html>
