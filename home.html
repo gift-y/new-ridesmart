@@ -2,58 +2,139 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" href="./ridesmartlogo.png">
-    <link rel="stylesheet" href="./demo.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RideSmart</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>RideSmart - Reliable Transportation</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="./ridesmartlogo.png">
+    <!-- Google Maps JavaScript API with Places library -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&libraries=places" async defer></script>
+</head>
 <body>
-    <header>
-    <div class="nav">
-<div>
-    <h4> RideSmart</h4>
-</div>
-<div class="auth-buttons">
-    <button class="register">Register</button>
-    <button class="signin">Sign In</button>
-</div>
-    </div>
-    <div class="head">
-        <img class="logo" src="./bus-sketch 1.png">
-        <h2>Smarter, <span style="color:green;">Safer</span> and Faster <br>Transportation for students</h2>
-        <h4 style="color:whitesmoke">Search for smarter rides and enjoy a seamless to-and-from trips everyday.</h4>
-        <div class="search">
-            <i class="fa-solid fa-location-dot"></i>
-            <p>Location</p>
-            <i class="fa-regular fa-map"></i>
-            <p>Destination</p>
-            <i class="fa-regular fa-calendar"></i>
-            <p>Date</p>
-            <i class="fa-regular fa-user"></i>
-            <p>Passenger</p>
-            <input type="text" placeholder="Search">
-        </div>
-        <div class="container">
-            <img src="./bus-sketch 1.png" class="bus-sketch">
-        </div>
-    </div>
-    <div class="header-image">
-        <img src="./Frame 1.png">
-    </div>
-</header>
-<section class="features-section">
-<div class="features-container">
-    
-        <i class="fa-regular fa-phone-volume"></i>
-        <p><strong>With 24/7 customer service,</strong> we've got your back on every ride.</p>
-    
-    <div class="divider"></div>
-    <div class="feature">
-        <i class="fa-sharp fa-light fa-shield"></i> 
-        <p><strong>Cancel anytime</strong> and get a 100% refund-no questions asked.</p>
-    </div>
+    <div class="main-container">
+        <header>
+            <div class="nav">
+                <div class="logo">
+                    <img src="./ridesmartlogo.png" alt="RideSmart Logo">
+                    <h4>RideSmart</h4>
+                </div>
+                <div class="auth-buttons">
+                    <button class="register">Register</button>
+                    <button class="signin">Sign In</button>
+                </div>
+            </div>
+            <div class="hero-section">
+                <div class="hero-content">
+                    <h2>Smarter, <span class="highlight">Safer</span> and Faster<br>Transportation for Students</h2>
+                    <p class="subtitle">Search for smarter rides and enjoy a seamless to-and-from trips everyday.</p>
+                    
+                    <div class="search-container">
+                        <div class="search-inputs">
+                            <div class="search-field">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <input type="text" id="location-input" placeholder="Location">
+                            </div>
+                            <div class="search-field">
+                                <i class="fa-solid fa-map-marker-alt"></i>
+                                <input type="text" id="destination-input" placeholder="Destination">
+                            </div>
+                            <div class="search-field">
+                                <i class="fa-regular fa-calendar" id="calendar-icon"></i>
+                                <input type="date" id="date-input" placeholder="Date">
+                            </div>
+                            <div class="search-field">
+                                <i class="fa-solid fa-user"></i>
+                                <select>
+                                    <option>Passenger</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4+</option>
+                                </select>
+                            </div>
+                            <button class="search-button">Search</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bus-illustration">
+                    <img src="./bus-sketch 1.png" alt="Bus Illustration" class="bus-sketch">
+                </div>
+            </div>
+        </header>
 
-</div>
-</section>
+        <section class="features-section">
+            <div class="features-container">
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+                    <p><strong>With 24/7 customer service,</strong> we've got your back on every ride.</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-shield-alt"></i>
+                    </div>
+                    <p><strong>Cancel anytime</strong> and get a 100% refund-no questions asked.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials-section">
+            <h3>Rated by <span class="highlight">students</span>, love by all</h3>
+            
+            <div class="testimonials-container">
+                <button class="nav-arrow prev"><i class="fa-solid fa-chevron-left"></i></button>
+                
+                <div class="testimonial-cards">
+                    <div class="testimonial-card">
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">Driver was very helpful and polite. Driver was very helpful and polite. Very kind all the way.</p>
+                        <p class="testimonial-author">John D.</p>
+                        <p class="testimonial-date">3 hours ago</p>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">Driver was very helpful and polite. Driver was very helpful and polite. Very kind all the way.</p>
+                        <p class="testimonial-author">Sarah M.</p>
+                        <p class="testimonial-date">5 hours ago</p>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">Driver was very helpful and polite. Driver was very helpful and polite. Very kind all the way.</p>
+                        <p class="testimonial-author">Mike T.</p>
+                        <p class="testimonial-date">7 hours ago</p>
+                    </div>
+                </div>
+                
+                <button class="nav-arrow next"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-links">
+                <a href="#" class="footer-link"><i class="fa-solid fa-home"></i> Home</a>
+                <a href="#" class="footer-link"><i class="fa-solid fa-info-circle"></i> About</a>
+                <a href="#" class="footer-link"><i class="fa-solid fa-headset"></i> Customer Services</a>
+            </div>
+        </footer>
+    </div>
+    
+    <script src="./main.js"></script>
 </body>
 </html>
